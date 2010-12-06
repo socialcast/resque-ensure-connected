@@ -7,13 +7,32 @@ class TestResqueEnsureConnected < Test::Unit::TestCase
     end
   end
 
+  class FakeHandler
+    @invoked = false
+    def verify_active_connections!
+      @@invoked = true
+      puts 'invoked'
+      puts @@invoked
+    end
+    def self.invoked?
+      @invoked
+    end
+  end
+
   should "ensure verify connections after forking process" do
     Resque.redis.flushall
-    workerA = Resque::Worker.new(:jobs)
+    worker = Resque::Worker.new(:jobs)
     Resque::Job.create(:jobs, FakeJob, 20, '/tmp')
 
-    handler = mock 'handler', :verify_active_connections! => nil
+    handler = FakeHandler.new
     ActiveRecord::Base.connection_handler = handler
-    workerA.work(0)
+    puts FakeHandler.invoked?
+    worker.work(0)
+
+    puts 'assert'
+    puts FakeHandler.invoked?
+    puts handler.inspect
+    assert FakeHandler.invoked?
+    #WTF? why is this assertion failing?
   end
 end
