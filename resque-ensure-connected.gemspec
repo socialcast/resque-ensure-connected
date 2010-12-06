@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Sonnek"]
-  s.date = %q{2010-12-05}
+  s.date = %q{2010-12-06}
   s.description = %q{ensure active record connections are valid before performing work}
   s.email = %q{ryan@codecrate.com}
   s.extra_rdoc_files = [
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/resque-ensure-connected.rb",
+    "resque-ensure-connected.gemspec",
     "test/helper.rb",
     "test/test_resque-ensure-connected.rb"
   ]
