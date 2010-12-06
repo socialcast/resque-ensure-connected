@@ -1,11 +1,12 @@
 require 'active_record'
 
-module Resque
-  module Plugin
-    module EnsureConnected
-      def before_work
-        ActiveRecord::Base.connection_handler.verify_active_connections!
-      end
-    end
+Resque.after_fork do |job|
+  begin
+    puts 'here'
+    puts ActiveRecord::Base.connection_handler.inspect
+    ActiveRecord::Base.connection_handler.verify_active_connections!
+    puts 'after'
+  rescue => e
+    puts e.inspect
   end
 end
