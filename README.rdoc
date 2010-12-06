@@ -1,6 +1,6 @@
 = resque-ensure-connected
 
-Description goes here.
+Ensure that all resque jobs have a valid activerecord connection before execution.
 
 == Contributing to resque-ensure-connected
  
