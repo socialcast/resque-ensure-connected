@@ -15,9 +15,9 @@ Jeweler::Tasks.new do |gem|
   gem.name = "resque-ensure-connected"
   gem.homepage = "http://github.com/wireframe/resque-ensure-connected"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "ryan@socialcast.com"
+  gem.summary = %Q{ensure active record connections are valid before performing work}
+  gem.description = %Q{ensure active record connections are valid before performing work}
+  gem.email = "ryan@codecrate.com"
   gem.authors = ["Ryan Sonnek"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
