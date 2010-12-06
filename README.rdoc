@@ -2,6 +2,14 @@
 
 Ensure that all resque jobs have a valid activerecord connection before execution.
 
+== Configuration
+
+NONE!  The gem automatically configures Resque to connect with each forked process.
+
+== Installation
+
+  gem resque-ensure-connected
+
 == Contributing to resque-ensure-connected
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
