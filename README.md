@@ -1,19 +1,19 @@
-= resque-ensure-connected
+# resque-ensure-connected
 
 Ensure that all resque jobs have a valid activerecord connection before execution.
 
-== Configuration
+## Configuration
 
 NONE!  The gem automatically configures Resque to connect with each forked process.
 
-== Installation
+## Installation
 
 ``` ruby
 # Bundler Gemfile
 gem resque-ensure-connected
 ```
 
-== Contributing
+## Contributing
  
 * Fork the project
 * Fix the issue
@@ -22,7 +22,7 @@ gem resque-ensure-connected
 
 see CONTRIBUTORS.txt for complete list of contributors.
 
-== Copyright
+## Copyright
 
 Copyright (c) 2011 Socialcast Inc. 
 See LICENSE.txt for further details.
