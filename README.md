@@ -10,7 +10,7 @@ NONE!  The gem automatically configures Resque to connect with each forked proce
 
 ``` ruby
 # Bundler Gemfile
-gem resque-ensure-connected
+gem 'resque-ensure-connected'
 ```
 
 ## Contributing
