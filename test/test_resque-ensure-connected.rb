@@ -20,14 +20,18 @@ class TestResqueEnsureConnected < Test::Unit::TestCase
   end
 
   should "ensure verify connections after forking process" do
-    Resque.redis.flushall
+    Resque.reset!
+    Resque.enable_hooks!
     worker = Resque::Worker.new(:jobs)
     Resque::Job.create(:jobs, FakeJob, 20, '/tmp')
 
     handler = FakeHandler.new
     ActiveRecord::Base.connection_handler = handler
     puts FakeHandler.invoked?
-    worker.work(0)
+
+    Resque.run!
+    # Resque.reset!
+    # worker.work(0)
 
     puts 'assert'
     puts FakeHandler.invoked?
