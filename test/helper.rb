@@ -13,6 +13,7 @@ require 'test/unit'
 require 'shoulda'
 require 'mocha'
 require 'resque_unit'
+Resque.enable_hooks!
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
