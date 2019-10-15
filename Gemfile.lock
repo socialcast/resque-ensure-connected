@@ -22,7 +22,7 @@ GEM
     arel (2.2.1)
     builder (3.0.0)
     i18n (0.6.0)
-    json (1.4.6)
+    json (2.2.0)
     mocha (0.9.8)
       rake
     multi_json (1.0.3)
