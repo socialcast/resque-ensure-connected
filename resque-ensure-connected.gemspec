@@ -23,5 +23,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency(%q<shoulda>, [">= 0"])
   s.add_development_dependency(%q<mocha>, [">= 0"])
   s.add_development_dependency(%q<resque_unit>, ["0.4.1"])
-  s.add_development_dependency(%q<rake>, ["0.9.2.2"])
+  s.add_development_dependency(%q<rake>, "13.0.1")
 end
